@@ -1,0 +1,58 @@
+.popup-box {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  background-color: white;
+  width: 300px;
+  border: black;
+}
+
+.imgw {
+  position: fixed;
+  bottom: 0px;
+  left: 20px;
+}
+
+.popup-head-button {
+  background-color: darkblue;
+  color: white;
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+.messagesdiv {
+  border: 2px solid darkblue;
+  height: 300px;
+  overflow: scroll;
+}
+
+.popup-messages
+{
+  background-color: white;
+  color: black;
+  font-family: "Comic Sans MS";
+  font-size: small;
+  width: 100%;
+  border-color: darkblue;
+  overflow-y: scroll;
+  border-color: darkblue;
+}
+
+.popup-input
+{
+  background-color: white;
+  color: black;
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  height: 100%;
+  width: 100%;
+  border: 2px solid darkblue;
+}
+
+.source {
+  font-size: large;
+  color: red;
+}

@@ -1,0 +1,81 @@
+.input1 {
+  width: 300px;
+  height: 40px;
+  border-color: gray;
+  text-align: center;
+  font-family: "Comic Sans MS";
+  font-size: large;
+}
+
+.error {
+  width: 300px;
+  height: 40px;
+  font-family: "Comic Sans MS";
+  font-size: large;
+  text-align: center;
+  color: red;
+}
+
+.input2 {
+  width: 255px;
+  height: 40px;
+  border-color: gray;
+  text-align: center;
+  font-family: "Comic Sans MS";
+  font-size: large;
+}
+
+.header {
+  font-family: "Comic Sans MS";
+  width: 300px;
+  text-align: center;
+}
+
+.btnRejestruj {
+  font-family: "Comic Sans MS";
+  font-size: large;
+  color: white;
+  background-color: darkblue;
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+}
+
+.radio {
+  width: 25px;
+  height: 20px;
+  border-color: gray;
+  text-align: center;
+  font-family: "Comic Sans MS";
+  font-size: large;
+}
+
+.label1 {
+  width: 125px;
+  text-align: center;
+  font-family: "Comic Sans MS";
+  font-size: large;
+}
+
+.p1 {
+  display: flex; justify-content: space-around;
+}
+
+.date {
+  background-color: white;
+  font-family: "Comic Sans MS";
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.registerdiv {
+  width: 300px;
+}
+
+.maindiv {
+  width: 100%;
+  display: flex;
+}

@@ -1,0 +1,38 @@
+.button {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  color: white;
+  background-color: darkblue;
+  width: 200px;
+  height: 35px;
+  border: none;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+.header {
+  border-bottom: 2px solid;
+  font-size: x-large;
+}
+
+.maindiv {
+  width: 100%;
+  display: flex;
+}
+
+.list {
+  width: 52%;
+  display: flex;
+}
+
+.files {
+  width: 40%;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.maxwidth {
+  width: 100%;
+}

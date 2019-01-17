@@ -1,0 +1,19 @@
+<div class="maindiv">
+  <div class="example-fill-remaining-space"></div>
+  <div class="logindiv">
+    <div>
+      <p class="spacer"></p>
+      <p class="spacer"></p>
+    </div>
+    <h1 class="header">
+      Ekran logowania
+    </h1>
+    <div>
+      <p *ngIf="error" class="error">{{error}}</p>
+      <p><input class="input1" placeholder="Login lub email" [(ngModel)]="loginEmail"></p>
+      <p><input class="input1" placeholder="Hasło" [(ngModel)]="haslo"></p>
+      <p><button class="btnLogowanie" (click)="loginC()">Zaloguj</button></p>
+    </div>
+  </div>
+  <div class="example-fill-remaining-space"></div>
+</div>

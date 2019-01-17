@@ -1,0 +1,18 @@
+.maindiv {
+  width: 100%;
+  display: flex;
+}
+
+.list {
+  width: 46%;
+  display: flex;
+}
+
+.detail {
+  width: 46%;
+  display: flex;
+}
+
+.spacer {
+  width: 4%;
+}

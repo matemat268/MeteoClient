@@ -1,0 +1,18 @@
+.maindiv {
+  display: flex;
+  width: 100%;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.login {
+  width: 45%;
+  display: flex;
+}
+
+.register {
+  width: 45%;
+  display: flex;
+}

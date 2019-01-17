@@ -1,0 +1,14 @@
+.tab {
+  font-family: "Comic Sans MS";
+  color: black;
+  font-size: large;
+}
+::ng-deep .mat-tab-label {
+  font-family: "Comic Sans MS";
+  color:black;
+  font-size: large;
+}
+
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active{
+  background-color: blue;
+}

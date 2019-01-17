@@ -1,0 +1,37 @@
+<div>
+  <div>
+    <p>
+      Witaj w module użytkownika
+    </p>
+  </div>
+
+  <div>
+    <button (click)="getUsers()">Pobierz użytkowników</button>
+  </div>
+  <div></div>
+  <ng-container *ngIf="users.length > 0; else noUsers">
+    <ul>
+      <li *ngFor="let user of users">
+        {{user.login}} {{user.imie}} {{user.nazwisko}} {{user.email}} {{user.data_ur}} {{user.plec}}
+      </li>
+    </ul>
+  </ng-container>
+  <ng-template #noUsers>
+    <p>Brak użytkowników</p>
+  </ng-template>
+  <div>
+    <p>Imię:           <input [(ngModel)]="imie"></p>
+    <p>Nazwisko:       <input [(ngModel)]="nazwisko"></p>
+    <p>Email:          <input [(ngModel)]="email"></p>
+    <p>Płeć:           <input [(ngModel)]="plec"></p>
+    <p>Data urodzenia: <input [(ngModel)]="data_ur" type="date"></p>
+    <p>Login:          <input [(ngModel)]="login"></p>
+    <p>Hasło:          <input [(ngModel)]="haslo"></p>
+    <button (click)="addUser()">Rejestruj</button>
+  </div>
+  <div>
+    <p>
+      {{imie}} {{nazwisko}} {{email}} {{plec}} {{data_ur}} {{login}} {{haslo}}
+    </p>
+  </div>
+</div>

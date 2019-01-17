@@ -1,0 +1,36 @@
+<div class="maindiv">
+  <div class="example-fill-remaining-space">
+  </div>
+  <div class="list">
+    <app-station-list></app-station-list>
+  </div>
+  <div class="example-fill-remaining-space">
+  </div>
+  <div class="files">
+    <div>
+      <h2 class="header">Dodawanie stacji</h2>
+    </div>
+    <div class="maxwidth">
+      <button (click)="fileInput.click()" class="button">
+        Dodaj plik
+        <input #fileInput type="file" (change)="onFileInput($event)" style="display:none;" />
+      </button>
+      <button class="button" (click)="save()">Zapisz</button>
+    </div>
+    <div>
+      <ng-container *ngIf="files.length > 0; else noFiles">
+        <ul>
+          <li *ngFor="let file of files">
+            {{file.name}}
+            <button (click)="remove(file)" class="button">Usuń</button>
+          </li>
+        </ul>
+      </ng-container>
+      <ng-template #noFiles>
+        <p>Brak dodanych plików</p>
+      </ng-template>
+    </div>
+  </div>
+  <div class="example-fill-remaining-space">
+  </div>
+</div>

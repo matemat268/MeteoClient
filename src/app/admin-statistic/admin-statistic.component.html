@@ -1,0 +1,27 @@
+<div class="maindiv">
+  <ng-container *ngIf="admin">
+    <p>
+      Statystyki systemu:
+    </p>
+    <p style="display: flex">
+      <span>Ilość logowań dzisiaj:</span>
+      <span class="example-fill-remaining-space"></span>
+      <span style="color: red">{{systemstats.logInToday}}</span>
+    </p>
+    <p style="display: flex">
+      <span>Nowi uzytkownicy dzisiaj:</span>
+      <span class="example-fill-remaining-space"></span>
+      <span style="color: red">{{systemstats.newUsersToday}}</span>
+    </p>
+    <p style="display: flex">
+      <span>Nowi użytkownicy w tym miesiącu:</span>
+      <span class="example-fill-remaining-space"></span>
+      <span style="color: red">{{systemstats.newUsersMonth}}</span>
+    </p>
+    <p style="display: flex">
+      <span>Najnowszy użytkownik:</span>
+      <span class="example-fill-remaining-space"></span>
+      <span style="color: red">{{systemstats.newestUser.login}}</span>
+    </p>
+  </ng-container>
+</div>

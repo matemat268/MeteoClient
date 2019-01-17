@@ -1,0 +1,32 @@
+<div class="maindiv">
+  <h2 class="header">Statystyki stacji: {{stationDetails.lastMeasurement.stacja.nazwa}}</h2>
+  <p>Pomiary zbierane od: {{stationDetails.firstMeasurement}}</p>
+  <p class="p"><span class="left"></span>
+    <span class="right">Roczna/Ostatni miesiąc</span></p>
+  <p class="p"><span class="left">Średnia temperatura maksymalna:</span>
+    <span class="right"><!--{{stationDetails.avgTYmax}}-->9.3033°C/{{stationDetails.avgTMmax}}2.5879°C</span></p>
+  <p class="p"><span class="left">Średnia temperatura minimalna:</span>
+    <span class="right"><!--{{stationDetails.avgTYmin}}-->1.6433°C/{{stationDetails.avgTMmin}}-3.8721°C</span></p>
+  <p class="p"><span class="left">Średnia temperatura:</span>
+    <span class="right"><!--{{stationDetails.avgTYavg}}-->4.52°C/{{stationDetails.avgTMavg}}°C</span></p>
+  <p class="p"><span class="left">Suma opadów:</span>
+    <span class="right"><!--{{stationDetails.sumRainfallY}}-->12mm/{{stationDetails.sumRainfallM}}22mm</span></p>
+  <p class="p"><span class="left">Średnia wilgotność:</span>
+    <span class="right">{{stationDetails.avgHumY}}83%/{{stationDetails.avgHumM}}79%</span></p>
+  <p class="p"><span class="left">Średnia prędkość wiatru:</span>
+    <span class="right">{{stationDetails.avgWindSpeedY}}1.8km/h/{{stationDetails.avgWindSpeedM}}2.2km/h</span></p>
+  <p>Najwyższa zarejestrowana temperatura: {{stationDetails.maxTValue}}°C z dnia: {{stationDetails.maxTDay}}</p>
+  <p>Najniższa zarejestrowana temperatura: {{stationDetails.minTValue}}°C z dnia: {{stationDetails.minTDay}}</p>
+  <p>Najwyższa zarejestrowana prędkość wiatru: {{stationDetails.maxWindSpeedValue}}36km/h z dnia: {{stationDetails.maxWindSpeedDay}}</p>
+  <p>Najwyższe zarejestrowana opady: {{stationDetails.maxRainfallValue}}mm z dnia: {{stationDetails.maxRainfallDay}}</p>
+
+  <h2 class="header">Ostatni pomiar</h2>
+  <p>Pomiar z dnia: {{stationDetails.lastMeasurement.dzien}}</p>
+  <li>Średnia temperatura dzienna: {{stationDetails.lastMeasurement.sr_t}}°C</li>
+  <li>Minimalna temperatura dzienna: {{stationDetails.lastMeasurement.min_t}}°C</li>
+  <li>Maksymalna temperatura dzienna: {{stationDetails.lastMeasurement.max_t}}°C</li>
+  <li>Rodzaj opadów: {{stationDetails.lastMeasurement.rodzaj_opad}}</li>
+  <li>Suma opadów: {{stationDetails.lastMeasurement.sum_opad}}mm</li>
+  <li>Średnia wilgotność dzienna: {{stationDetails.lastMeasurement.sr_wilg}}67%</li>
+  <li>Średnia prędkość wiatru dzienna: {{stationDetails.lastMeasurement.sr_pr_wiatr}}1.8km/h</li>
+</div>

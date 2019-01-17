@@ -1,0 +1,98 @@
+<div class="maindiv">
+  <div style="display: flex">
+    <div style="display: grid; width: 40%;">
+      <div class="table">
+        <div class="content">
+          <h2 class="header">Moje pomiary</h2>
+          <div class="tablediv">
+            <ag-grid-angular #grid
+                             style="height: 600px; background-color: lightskyblue; scrollbar-base-color: lightskyblue"
+                             [enableSorting]="true"
+                             [enableFilter]="true"
+                             [rowData]="rowData | async"
+                             [columnDefs]="columnDefs"
+                             [enableColResize]="true">
+            </ag-grid-angular>
+          </div>
+          <p></p>
+          <button class="button">Usuń</button>
+          <button class="button">Udostępnij</button>
+        </div>
+      </div>
+      <div class="files">
+        <div>
+          <h2 class="header">Dodawanie pomiarów</h2>
+        </div>
+        <div class="listdiv">
+          <button (click)="fileInput.click()" class="button">
+            Dodaj plik
+            <input #fileInput type="file" (change)="onFileInput($event)" style="display:none;" />
+          </button>
+          <button class="button" (click)="save()">Zapisz</button>
+        </div>
+        <div>
+          <ng-container *ngIf="true; else noFiles">
+            <ul>
+              <li *ngFor="let file of files">
+                {{file.name}}
+                <button (click)="remove(file)" class="button">Usuń</button>
+              </li>
+            </ul>
+          </ng-container>
+          <ng-template #noFiles>
+            <p>Brak dodanych plików</p>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    <div class="example-fill-remaining-space"></div>
+    <div style="display: grid; width: 40%;">
+      <div style="display: grid">
+        <div class="table">
+          <div class="content">
+            <h2 class="header">Udostępnione pomiary</h2>
+            <div class="tablediv">
+              <ag-grid-angular #grid
+                               style="height: 600px; background-color: lightskyblue; scrollbar-base-color: lightskyblue"
+                               [enableSorting]="true"
+                               [enableFilter]="true"
+                               [rowData]="rowData2 | async"
+                               [columnDefs]="columnDefs"
+                               [enableColResize]="true">
+              </ag-grid-angular>
+            </div>
+          </div>
+        </div>
+        <p></p>
+        <button class="button">Usuń</button>
+        <div class="files">
+          <div>
+            <h2 class="header">Przykładowy plik</h2>
+          </div>
+          <div>
+            Data od:
+            <input class="date" [matDatepicker]="myDatepicker" placeholder="Data od" [(ngModel)]="dateFrom">
+            <mat-datepicker-toggle [for]="myDatepicker"></mat-datepicker-toggle>
+            <mat-datepicker #myDatepicker touchUi="true"></mat-datepicker>
+            Data do:
+            <input class="date" [matDatepicker]="myDatepicker2" placeholder="Data do" [(ngModel)]="dateTo">
+            <mat-datepicker-toggle [for]="myDatepicker2"></mat-datepicker-toggle>
+            <mat-datepicker #myDatepicker2 touchUi="true"></mat-datepicker>
+          </div>
+          <div>
+            Stacja:
+            <select class="select" [(ngModel)]="stationId">
+              <option *ngFor="let s of stations" [value]="s.id_stacji">
+                {{s.nazwa}}
+              </option>
+            </select>
+          </div>
+          <p></p>
+          <div>
+            <button class="button" (click)="generateExamples()">Generuj przykładowy plik</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

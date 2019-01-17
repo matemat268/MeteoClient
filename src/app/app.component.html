@@ -1,0 +1,24 @@
+<div class="maindiv">
+  <div>
+    <app-main-toolbar></app-main-toolbar>
+    <button mat-button [matMenuTriggerFor]="menu" class="menubutton">Menu</button>
+    <mat-menu #menu="matMenu">
+      <app-route-panel></app-route-panel>
+    </mat-menu>
+  </div>
+  <div class="content">
+    <div class="leftdiv">
+      <app-admin-statistic></app-admin-statistic>
+    </div>
+    <div class="example-fill-remaining-space"></div>
+    <div class="outlet">
+      <router-outlet></router-outlet>
+      <p style="height: 30px"></p>
+    </div>
+    <div class="example-fill-remaining-space"></div>
+    <div class="rightdiv">
+      <app-prognoza></app-prognoza>
+    </div>
+    <app-chat></app-chat>
+  </div>
+</div>

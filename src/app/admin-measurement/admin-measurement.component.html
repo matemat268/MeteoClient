@@ -1,0 +1,46 @@
+<div class="maindiv">
+  <span class="example-fill-remaining-space"></span>
+  <div class="table">
+    <div class="content">
+      <h2 class="header">Pomiary</h2>
+    </div>
+    <div class="tablediv">
+      <ag-grid-angular #grid
+                       style="height: 600px; background-color: lightskyblue; scrollbar-base-color: lightskyblue"
+                       [enableSorting]="true"
+                       [enableFilter]="true"
+                       [rowData]="rowData | async"
+                       [columnDefs]="columnDefs"
+                       [enableColResize]="true"
+                       (gridReady)="onGridReady($event)">
+      </ag-grid-angular>
+    </div>
+  </div>
+  <span class="example-fill-remaining-space"></span>
+  <div class="files">
+    <div>
+      <h2 class="header">Dodawanie pomiarów</h2>
+    </div>
+    <div class="maxwidth">
+      <button (click)="fileInput.click()" class="button">
+        Dodaj plik
+        <input #fileInput type="file" (change)="onFileInput($event)" style="display:none;" />
+      </button>
+      <button class="button" (click)="save()">Zapisz</button>
+    </div>
+    <div>
+      <ng-container *ngIf="true; else noFiles">
+        <ul>
+          <li *ngFor="let file of files">
+            {{file.name}}
+            <button (click)="remove(file)" class="button">Usuń</button>
+          </li>
+        </ul>
+      </ng-container>
+      <ng-template #noFiles>
+        <p>Brak dodanych plików</p>
+      </ng-template>
+    </div>
+  </div>
+  <span class="example-fill-remaining-space"></span>
+</div>

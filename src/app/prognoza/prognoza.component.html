@@ -1,0 +1,30 @@
+<div class="maindiv">
+  <p>
+    Aktualna pogoda dla stacji:
+    <select class="select" [(ngModel)]="stationId" (click)="selectionChange()">
+      <option *ngFor="let s of values" [value]="s.id_stacji">
+        {{s.stacja}}
+      </option>
+    </select>
+  </p>
+  <p style="display: flex">
+    <span>Temperatura:</span>
+    <span class="example-fill-remaining-space"></span>
+    <span style="color: red">{{temperature}}°C</span>
+  </p>
+  <p style="display: flex">
+    <span>Predkość wiatru:</span>
+    <span class="example-fill-remaining-space"></span>
+    <span style="color: red">{{windSpeed}}km/h</span>
+  </p>
+  <p style="display: flex">
+    <span>Ciśnienie:</span>
+    <span class="example-fill-remaining-space"></span>
+    <span style="color: red">{{pressure}}HPa</span>
+  </p>
+  <p style="display: flex">
+    <span>Wilgotność względna:</span>
+    <span class="example-fill-remaining-space"></span>
+    <span style="color: red">{{humidity}}%</span>
+  </p>
+</div>

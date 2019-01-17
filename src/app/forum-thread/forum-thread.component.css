@@ -1,0 +1,94 @@
+.maindiv {
+  width: 100%;
+  display: flex;
+}
+
+.seconddiv {
+  width: 92%;
+}
+
+.span {
+  width: 50px;
+  height: 1px;
+}
+
+.button {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  background: white;
+  border: 2px solid darkblue;
+  margin-right: 10px;
+}
+
+.input1 {
+  width: 100%;
+  height: 40px;
+  border-color: gray;
+  text-align: left;
+  padding-left: 10px;
+  font-family: "Comic Sans MS";
+  font-size: large;
+  background-color: lightskyblue;
+}
+
+.input2 {
+  width: 100%;
+  height: 120px;
+  border-color: gray;
+  text-align: left;
+  padding-left: 10px;
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  background-color: lightskyblue;
+}
+
+.select {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  border: 2px solid darkblue;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.p {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+}
+
+.header {
+  border-bottom: 2px solid;
+  width: 100%;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.list {
+  list-style-type: none;
+  padding-top: 20px;
+  display: flex;
+}
+
+.number {
+  width: 50px;
+}
+
+.left {
+  width: 950px;
+}
+
+.right {
+}
+
+.buttonnew {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  color: white;
+  background-color: darkblue;
+  min-width: 200px;
+  height: 35px;
+  border: none;
+  border-radius: 30px;
+  margin-right: 10px;
+}

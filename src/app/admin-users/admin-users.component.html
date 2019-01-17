@@ -1,0 +1,23 @@
+<div class="maindiv">
+  <span class="example-fill-remaining-space"></span>
+  <div class="content">
+    <h2 class="header">Zarejestrowani użytkownicy</h2>
+    <div class="tablediv">
+      <ag-grid-angular #grid
+                       class="grid"
+                       [enableSorting]="true"
+                       [enableFilter]="true"
+                       [rowData]="rowData | async"
+                       [columnDefs]="columnDefs"
+                       [enableColResize]="true"
+                       [rowSelection]="rowSelection"
+                       (gridReady)="onGridReady($event)"
+                       (selectionChanged)="onSelectionChanged($event)">
+      </ag-grid-angular>
+    </div>
+    <button class="buttonnew" (click)="delete()">Usuń</button>
+    <button class="buttonnew" (click)="makeAdmin()">Nadaj/odbierz administratora</button>
+  </div>
+  <span class="example-fill-remaining-space"></span>
+  <span class="example-fill-remaining-space"></span>
+</div>

@@ -1,0 +1,62 @@
+.maindiv {
+  width: 100%;
+  display: flex;
+}
+
+.content2 {
+  width: 92%;
+}
+
+.header {
+  border-bottom: 2px solid;
+  font-size: x-large;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.button {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  background: white;
+  border: 2px solid darkblue;
+  margin-right: 10px;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.content {
+  width: 100%;
+}
+
+.listel {
+  background-color: lightgray;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+}
+
+.grid {
+  height: 600px;
+  width: 100%;
+}
+
+.tablediv {
+  max-height: 600px;
+}
+
+.buttonnew {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  color: white;
+  background-color: darkblue;
+  min-width: 200px;
+  height: 35px;
+  border: none;
+  border-radius: 30px;
+  margin-right: 10px;
+}

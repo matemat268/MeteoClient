@@ -1,0 +1,22 @@
+<div class="maindiv">
+  <span class="example-fill-remaining-space"></span>
+  <div class="content">
+    <div>
+      <h2 class="header">Stacje</h2>
+    </div>
+    <div class="tablediv">
+      <ag-grid-angular #grid
+                       style="height: 600px; background-color: lightskyblue; scrollbar-base-color: lightskyblue"
+                       [enableSorting]="true"
+                       [enableFilter]="true"
+                       [rowData]="rowData | async"
+                       [columnDefs]="columnDefs"
+                       [enableColResize]="true"
+                       (firstDataRendered)="onFirstDataRendered($event)"
+                       (gridReady)="onGridReady($event)"
+                       [rowSelection]="rowSelection"
+                       (selectionChanged)="onSelectionChanged($event)">
+      </ag-grid-angular>
+    </div>
+  </div>
+</div>

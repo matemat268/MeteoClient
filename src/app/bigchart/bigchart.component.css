@@ -1,0 +1,66 @@
+.maindiv {
+  width: 100%;
+  display: flex;
+}
+
+.header {
+  border-bottom: 2px solid;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.chartdiv {
+  width: 92%;
+}
+
+.content {
+  width: 100%;
+}
+
+.button {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  background: white;
+  border: 2px solid darkblue;
+  margin-right: 10px;
+}
+
+.wykres {
+  height: 700px;
+}
+
+.seconddiv {
+  width: 90%;
+  display: flex;
+}
+
+.content {
+  width: 100%;
+}
+
+.osie {
+  font-family: "Comic Sans MS";
+  display: flex;
+}
+
+.select {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  border: 2px solid darkblue;
+  margin-right: 10px;
+  height: 30px;
+}
+
+.buttonnew {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  color: white;
+  background-color: darkblue;
+  width: 200px;
+  height: 35px;
+  border: none;
+  border-radius: 30px;
+  margin-left: 10px;
+}

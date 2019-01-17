@@ -1,0 +1,91 @@
+.maindiv {
+  width: 90%;
+}
+
+.header {
+  border-bottom: 2px solid;
+}
+
+.tablediv {
+  max-height: 600px;
+}
+
+.content {
+  width: 100%;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.firstdiv {
+  width: 100%;
+}
+
+.seconddiv {
+  width: 100%;
+  display: flex;
+}
+
+.spacer {
+  width: 4%;
+}
+
+.buttondiv {
+  font-family: "Comic Sans MS";
+  width: 100%;
+}
+
+.button {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  background: white;
+  margin-right: 10px;
+}
+
+.wykres {
+  width: 600px;
+  height: 600px;
+}
+
+.osie {
+  font-family: "Comic Sans MS";
+}
+
+.select {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  border: 2px solid darkblue;
+  margin-right: 10px;
+  height: 30px;
+}
+
+.date {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  border: 2px solid darkblue;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+}
+
+.grid {
+  height: 600px;
+  width: 100%;
+}
+
+.chartdiv {
+  width: 92%;
+}
+
+.buttonnew {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  color: white;
+  background-color: darkblue;
+  width: 200px;
+  height: 35px;
+  border: none;
+  border-radius: 30px;
+  margin-left: 100px;
+}

@@ -1,0 +1,39 @@
+<div class="maindiv">
+  <span class="example-fill-remaining-space"></span>
+  <div class="seconddiv">
+    <div class="content">
+      <h2 class="header">Generuj wykres</h2>
+      <div class="osie">
+        <span>
+          Oś y:
+        <select class="select" [(ngModel)]="dataType">
+          <option value="1">Temperatura maksymalna</option>
+          <option value="2">Temperatura średnia</option>
+          <option value="3">Temperatura minimalna</option>
+          <option value="4">Temperatura minumalna gruntu</option>
+          <option value="5">Suma opadów</option>
+          <option value="6">Średnia predkość wiatru</option>
+          <option value="7">Usłonecznienie</option>
+        </select>Typ wykreu:
+        <select class="select" [(ngModel)]="chartType">
+          <option value="line">Liniowy</option>
+          <option value="bar">Słupkowy</option>
+          <option value="radar">Radar</option>
+          <option value="pie">Kołowy</option>
+        </select>
+        </span>
+        <span class="example-fill-remaining-space"></span>
+        <span>
+          <button class="buttonnew" (click)="generateChart()">Generuj wykres</button>
+          <button class="buttonnew" routerLink="/measurement">Wróć</button>
+        </span>
+      </div>
+      <div><p></p></div>
+      <div class="wykres">
+        <canvas id="myChart" width="400" height="200"></canvas>
+      </div>
+      <div><p></p></div>
+    </div>
+  </div>
+  <span class="example-fill-remaining-space"></span>
+</div>

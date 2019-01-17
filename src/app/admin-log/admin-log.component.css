@@ -1,0 +1,17 @@
+.maindiv {
+  width: 100%;
+  display: flex;
+}
+
+.content {
+  width: 92%;
+}
+
+.header {
+  border-bottom: 2px solid;
+  font-size: x-large;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}

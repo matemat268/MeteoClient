@@ -1,0 +1,17 @@
+<div>
+  <mat-toolbar class="backgroundToolbar1">
+    <span><h1 class="title1" routerLink="/start">MeteoApp</h1></span>
+    <span><h1 class="title2" routerLink="/measurement">Pomiary</h1></span>
+    <span><h1 class="title2" routerLink="/stations">Stacje</h1></span>
+    <span><h1 class="title2" routerLink="/forum">Forum</h1></span>
+    <ng-container *ngIf="admin">
+      <span><h1 class="title2" routerLink="/admin">Administracja</h1></span>
+    </ng-container>
+    <span class="example-fill-remaining-space"></span>
+    <span><div>
+    <button class="btn1" routerLink="/login" *ngIf="!isLooged">Zaloguj</button>
+    <button class="btn1" routerLink="/register" *ngIf="!isLooged">Zarejestruj</button>
+    <p class="logged" *ngIf="isLooged" routerLink="/myaccount">Zalogowany: {{userName}}</p>
+  </div></span>
+  </mat-toolbar>
+</div>

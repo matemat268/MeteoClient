@@ -1,0 +1,26 @@
+<div class="maindiv">
+  <div class="example-fill-remaining-space"></div>
+  <div class="registerdiv">
+    <div>
+      <h1 class="header">
+        Witaj w rejestracji
+      </h1>
+    </div>
+    <div>
+      <p *ngIf="error" class="error">{{error}}</p>
+      <p><input class="input1" placeholder="Imię" [(ngModel)]="imie"></p>
+      <p><input class="input1" placeholder="Nazwisko" [(ngModel)]="nazwisko"></p>
+      <p><input class="input1" placeholder="Email" [(ngModel)]="email"></p>
+      <p class="p1"><input class="radio" type="radio" [(ngModel)]="plec" value="K"><label class="label1">Kobieta</label>
+        <input class="radio" type="radio" [(ngModel)]="plec" value="M"><label class="label1">Meżczyzna</label></p>
+      <p><input class="input2" [matDatepicker]="myDatepicker" placeholder="Data urodziń" [(ngModel)]="data_ur">
+        <mat-datepicker-toggle [for]="myDatepicker"></mat-datepicker-toggle>
+        <mat-datepicker #myDatepicker touchUi="true" class="date"></mat-datepicker></p>
+      <p><input class="input1" placeholder="Login" [(ngModel)]="login"></p>
+      <p><input class="input1" placeholder="Hasło" [(ngModel)]="haslo"></p>
+      <p><input class="input1" placeholder="Potwierdź hasło" [(ngModel)]="hasloACK"></p>
+      <p><button class="btnRejestruj" (click)="register()">Rejestruj!</button></p>
+    </div>
+  </div>
+  <div class="example-fill-remaining-space"></div>
+</div>

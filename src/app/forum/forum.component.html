@@ -1,0 +1,61 @@
+<div class="maindiv">
+  <div class="example-fill-remaining-space"></div>
+  <div class="seconddiv">
+    <div class="forum">
+      Forum MeteoApp
+      <div class="divbutton">
+        <button class="buttonnew" routerLink="/thread" (click)="setThread(null)">Nowy temat</button>
+      </div>
+    </div>
+    <div class="content">
+      <div class="headerdiv">
+        <h2 class="header">Tematy</h2>
+      </div>
+      <ng-container class="container">
+        <ul>
+          <li *ngFor="let t of threadList" class="list">
+            <div class="span"></div>
+            <div class="watek">
+              <div class="left" (click)="setThread(t)" routerLink="/thread">
+                <div class="title">
+                  <ng-container *ngIf="t.typ == 'H'">
+                    [Ogłoszenie]
+                  </ng-container>
+                  <ng-container *ngIf="t.typ == 'O'">
+                    [Pomocy!!!]
+                  </ng-container>
+                  {{t.tytul}}
+                </div>
+                <div class="autor">
+                  Dodane przez {{t.uzyt.login}}
+                </div>
+                <div class="lodpowiedzi">
+                  {{t.posty.length}} odpowiedzi
+                </div>
+              </div>
+              <div class="right">
+                <div class="autoostatni">
+                  <ng-container *ngIf="t.posty.length > 0">
+                    Ostatni post: {{t.posty[t.posty.length-1].uzyt.login}}
+                  </ng-container>
+                </div>
+                <div class="autoostatnikiedy">
+                  <ng-container *ngIf="t.posty.length > 0">
+                    {{t.posty[t.posty.length-1].data}}
+                  </ng-container>
+                </div>
+              </div>
+              <div>
+                <button class="buttonnew2">Usuń</button>
+                <button class="buttonnew2" (click)="setThread(t)" routerLink="/thread">Odpowiedz</button>
+              </div>
+            </div>
+            <div class="span"></div>
+          </li>
+        </ul>
+      </ng-container>
+    </div>
+  </div>
+  <div class="example-fill-remaining-space"></div>
+  <div class="example-fill-remaining-space"></div>
+</div>

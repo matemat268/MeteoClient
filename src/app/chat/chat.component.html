@@ -1,0 +1,18 @@
+<div class="imgw">
+  <p class="source">
+    „Źródłem pochodzenia danych jest Instytut Meteorologii i Gospodarki Wodnej – Państwowy Instytut Badawczy”
+  </p>
+</div>
+<div class="popup-box">
+  <div>
+    <button class="popup-head-button" (click)="chatVisible = !chatVisible">Czat</button>
+  </div>
+  <div class="messagesdiv" [hidden]="!chatVisible">
+    <ul class="popup-messages" *ngFor="let m of messages">
+      <li>{{m}}</li>
+    </ul>
+  </div>
+  <div  [hidden]="!chatVisible">
+    <input #inputmessage class="popup-input" placeholder="Wiadomość" [(ngModel)]="message" (keyup.enter)="sendMessage()">
+  </div>
+</div>

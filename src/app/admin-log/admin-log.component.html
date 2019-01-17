@@ -1,0 +1,19 @@
+<div class="maindiv">
+  <span class="example-fill-remaining-space"></span>
+  <div class="content">
+    <h2 class="header">Logi systemowe</h2>
+    <div class="tablediv">
+      <ag-grid-angular #grid
+                       style="height: 600px; background-color: lightskyblue; scrollbar-base-color: lightskyblue"
+                       [enableSorting]="true"
+                       [enableFilter]="true"
+                       [rowData]="rowData | async"
+                       [columnDefs]="columnDefs"
+                       [enableColResize]="true"
+                       (gridReady)="onGridReady($event)">
+      </ag-grid-angular>
+    </div>
+  </div>
+  <span class="example-fill-remaining-space"></span>
+  <span class="example-fill-remaining-space"></span>
+</div>

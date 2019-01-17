@@ -1,0 +1,90 @@
+<div class="maindiv">
+  <div class="firstdiv">
+    <span class="example-fill-remaining-space"></span>
+    <div>
+      <div class="content">
+        <h2 class="header">Pomiary</h2>
+      </div>
+      <div class="buttondiv">
+        <p>Kryteria:</p>
+        <div style="display: flex">
+          <div style="display: grid; height: 80px; margin-top: 10px">
+            <div style="display: flex; height: 40px">Data od:</div>
+            <div style="display: flex; height: 40px">Data do:</div>
+          </div>
+          <div style="display: grid; height: 80px; margin-top: 10px">
+            <div style="display: flex; height: 40px">
+              <input class="date" [matDatepicker]="myDatepicker" placeholder="Data od" [(ngModel)]="dateFrom">
+            </div>
+            <div style="display: flex; height: 40px">
+              <input class="date" [matDatepicker]="myDatepicker2" placeholder="Data do" [(ngModel)]="dateTo">
+            </div>
+          </div>
+          <div style="display: grid; height: 80px">
+            <div style="display: flex; height: 40px">
+              <mat-datepicker-toggle [for]="myDatepicker"></mat-datepicker-toggle>
+              <mat-datepicker #myDatepicker touchUi="true"></mat-datepicker>
+            </div>
+            <div style="display: flex; height: 40px">
+              <mat-datepicker-toggle [for]="myDatepicker2"></mat-datepicker-toggle>
+              <mat-datepicker #myDatepicker2 touchUi="true"></mat-datepicker>
+            </div>
+          </div>
+          <div style="display: grid; height: 80px; margin-top: 10px">
+            <div style="display: flex; height: 40px">Stacja:</div>
+            <div style="display: flex; height: 40px">Agregacja:</div>
+          </div>
+          <div style="display: grid; height: 80px; margin-top: 10px">
+            <div style="display: flex; height: 40px">
+              <select class="select" [(ngModel)]="stationId">
+                <option *ngFor="let s of stations" [value]="s.id_stacji">
+                  {{s.nazwa}}
+                </option>
+              </select>
+            </div>
+            <div style="display: flex; height: 40px">
+              <select class="select" [(ngModel)]="agregation">
+                <option value="D">Dzień</option>
+                <option value="M">Miesiąc</option>
+                <option value="R">Rok</option>
+              </select>
+            </div>
+          </div>
+          <div style="display: grid; height: 80px; margin-top: 10px">
+            <div style="display: flex; height: 40px">Dołącz moje pomiary:</div>
+            <div style="display: flex; height: 40px">Dołącz mi udostępnione pomiary:</div>
+          </div>
+          <div style="display: grid; height: 80px; margin-top: 15px">
+            <div style="display: flex; height: 40px"><input type="checkbox"[(ngModel)]="myMeasurement"></div>
+            <div style="display: flex; height: 40px"><input type="checkbox"[(ngModel)]="sharedMeasurement"></div>
+          </div>
+          <div style="display: grid; height: 80px; margin-top: 10px">
+            <div style="display: flex; height: 40px">
+              <button class="buttonnew" (click)="searchData()">Wyszukaj</button>
+            </div>
+            <div style="display: flex; height: 40px">
+              <button class="buttonnew" routerLink="/chart" (click)="openBigChart()">Przejdź do wykresu</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p></p>
+      </div>
+      <div class="tablediv">
+        <ag-grid-angular #grid
+                         class="grid"
+                         [enableSorting]="true"
+                         [enableFilter]="true"
+                         [rowData]="rowData | async"
+                         [columnDefs]="columnDefs"
+                         [enableColResize]="true"
+                         [rowSelection]="rowSelection"
+                         (gridReady)="onGridReady($event)"
+                         (selectionChanged)="onSelectionChanged($event)">
+        </ag-grid-angular>
+      </div>
+    </div>
+    <span class="example-fill-remaining-space"></span>
+  </div>
+</div>

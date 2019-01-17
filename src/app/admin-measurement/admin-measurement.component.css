@@ -1,0 +1,45 @@
+.maindiv {
+  width: 100%;
+  display: flex;
+}
+
+.header {
+  border-bottom: 2px solid;
+  font-size: x-large;
+}
+
+.tablediv {
+  max-height: 600px;
+}
+
+.content {
+  min-width: 520px;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.files {
+  width: 36%;
+}
+
+.table {
+  width: 56%;
+}
+
+.maxwidth {
+  width: 100%;
+}
+
+.button {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  color: white;
+  background-color: darkblue;
+  width: 200px;
+  height: 35px;
+  border: none;
+  border-radius: 30px;
+  margin-right: 10px;
+}

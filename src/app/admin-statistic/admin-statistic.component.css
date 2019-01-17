@@ -1,0 +1,14 @@
+.maindiv {
+  width: 240px;
+  margin-left: 20px;
+}
+
+.select {
+  font-family: "Comic Sans MS";
+  font-size: medium;
+  border: 2px solid darkblue;
+  width: 100%;
+}
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}

@@ -1,0 +1,14 @@
+<div>
+  <div><button class="button" routerLink="/start">Strona startowa</button></div>
+  <div><button class="button" routerLink="/measurement">Pomiary</button></div>
+  <div><button class="button" routerLink="/stations">Stacje</button></div>
+  <div><button class="button" routerLink="/forum">Forum</button></div>
+  <ng-container *ngIf="logged">
+    <div><button class="button" routerLink="/mymeasurement">Moje pomiary</button></div>
+    <div><button class="button" routerLink="/myaccount">Moje konto</button></div>
+  </ng-container>
+  <ng-container *ngIf="admin">
+    <div><button class="button" routerLink="/admin">Administracja</button></div>
+  </ng-container>
+  <div><button class="button" routerLink="/lodandreg">Zaloguj/Rejestruj</button></div>
+</div>

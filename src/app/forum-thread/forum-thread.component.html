@@ -1,0 +1,59 @@
+<div class="maindiv">
+  <div class="example-fill-remaining-space"></div>
+  <div class="seconddiv">
+    <ng-container *ngIf="modeInsert">
+      <h2 class="header">Nowy temat</h2>
+      <div class="newthreaddiv">
+        <p>
+          Typ:
+          <select class="select" [(ngModel)]="typ">
+            <option value="H">Prośba o pomoc</option>
+            <option value="O">Ogłoszenie</option>
+            <option value="S">Standardowy</option>
+          </select>
+          <input class="input1" placeholder="Tytuł" [(ngModel)]="titleText">
+        </p>
+        <p>
+          <textarea class="input2" placeholder="Treść..." [(ngModel)]="postText"></textarea>
+        </p>
+        <li *ngFor="let file of files">
+          {{file.name}}
+          <button (click)="remove(file)" class="buttonnew">Usuń</button>
+        </li>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!modeInsert">
+      <h2 class="header">{{thread.tytul}}</h2>
+      <div class="listthreaddiv">
+        <ng-container>
+          <ul *ngFor="let p of thread.posty">
+            <li class="list">
+              <div class="number">
+                {{p.nr_postu}}
+              </div>
+              <div class="left">
+                {{p.tresc}}
+              </div>
+              <div class="right">
+                Autor: {{p.uzyt.login}}
+                Data: {{p.data}}
+              </div>
+            </li>
+          </ul>
+        </ng-container>
+        <p>
+          <textarea class="input2" placeholder="Odpowiedz..." [(ngModel)]="postText"></textarea>
+        </p>
+      </div>
+      <div>
+        <li *ngFor="let file of files">
+          {{file.name}}
+        </li>
+      </div>
+    </ng-container>
+    <button class="buttonnew" routerLink="/forum">Wróć</button>
+    <button class="buttonnew" (click)="save()">Zapisz</button>
+  </div>
+  <div class="example-fill-remaining-space"></div>
+  <div class="example-fill-remaining-space"></div>
+</div>
